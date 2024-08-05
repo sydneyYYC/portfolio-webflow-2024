@@ -154,7 +154,7 @@
     });
     // console.log(data)
     // Send form data to the server
-    fetch('https://sydney-bruce-portfolio-webflow.netlify.app', {
+    fetch('https://sydney-bruce-portfolio-webflow.netlify.app/contact', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -163,12 +163,12 @@
     })
     .then(response => response.text())  // Use text() to handle plain text responses
     .then(result => {
-        // console.log('Success:', result); // Log response for debugging
+        console.log('Success:', result); // Log response for debugging
         submission.classList.remove('hidden');
         form.reset()
     })
     .catch(error => {
-        // console.error('Error:', error);
+        console.error('Error:', error);
         submissionError.classList.remove('hidden');
     });
 });
