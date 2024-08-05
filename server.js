@@ -6,7 +6,9 @@ require('dotenv').config();
 // var express = require('express');
 var cors = require('cors');
 var app = express();
-app.use(cors({origin: 'http://127.0.0.1:5500'}));
+app.use(cors({origin: 'https://sydney-bruce-portfolio-webflow.netlify.app',
+    methods: ['GET', 'POST'],
+}));
 
 // Middleware to parse JSON payloads
 app.use(bodyParser.json());
