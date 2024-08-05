@@ -14,7 +14,7 @@ app.use(cors({origin: 'https://sydney-bruce-portfolio-webflow.netlify.app',
 app.use(bodyParser.json());
 
 // Route to handle form submissions
-app.post('https://sydney-bruce-portfolio-webflow.netlify.app/contact', async (req, res) => {
+app.post('/contact', async (req, res) => {
   const { name, email, field } = req.body; // Extract data from the request body
 //   console.log('Received data:', req.body); // Log received data for debugging
   const subject = `Contact Form Submission from ${name}`;
